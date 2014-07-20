@@ -1,0 +1,12 @@
+<h1>slides capture</h1>
+<%= form_tag('/') do -%>
+	<%= label_tag 'url:' %>
+	<%= text_field_tag 'url' %>
+  <div><%= submit_tag 'Get Slides' %></div>
+<% end -%>
+
+<% if @slides_count %>
+	<% (0..@slides_count).each do |i| %>
+		<%= image_tag "capture_#{i}.png" %>
+	<% end %>
+<% end %>
