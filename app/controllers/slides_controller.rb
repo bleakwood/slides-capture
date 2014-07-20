@@ -9,8 +9,7 @@ class SlidesController <  ApplicationController
 		url = params[:url]
 		doc = Nokogiri::HTML(open(url))
 
-		# @slides_count = doc.css('.slides section').size
-		@slides_count = 0
+		@slides_count = doc.css('.slides section').size
 
 		0.upto(@slides_count) do |i|
 			new_url = url + i.to_s

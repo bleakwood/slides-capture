@@ -7,6 +7,6 @@
 
 <% if @slides_count %>
 	<% (0..@slides_count).each do |i| %>
-		<%= image_tag "capture_#{i}.png" %>
+		<%= image_tag "capture_#{i}.png", size: "400x300" %>
 	<% end %>
 <% end %>
